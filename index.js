@@ -11,7 +11,7 @@ class Task extends React.Component {
   render() {
 
     const { task, onDelete, onComplete } = this.props
-    const { id, content, complete } = task;
+    const { id, content, completed } = task;
     console.log(task)
 
     return (
@@ -21,8 +21,8 @@ class Task extends React.Component {
         <input
           type="checkbox"
           className="d-inline-block mt-2"
-          onChange={() => onComplete(id, complete)}
-          checked={complete}
+          onChange={() => onComplete(id, completed)}
+          checked={completed}
         />
       </div>
     )
